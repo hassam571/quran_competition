@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="{{ asset('public/assets/css/color.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Category List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Fredoka One', cursive;
+        }
+
+         body {
+position:relative;
+            background-color: #f7f8fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vw;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .button-group .btn {
+            flex: 1;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .active-button {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+        }
+
+        .list-container {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .list-header {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .list-item {
+            background-color: #f7f8fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .list-item .details {
+            display: none;
+            padding-top: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            padding: 15px;
+        }
+
+        .list-item.active .details {
+            display: block;
+        }
+
+        .arrow {
+            font-size: 18px;
+            color: var(--secondary-color);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+
+        .list-item.active .arrow {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .button-group-inline {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .btn-delete, .btn-edit {
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-delete {
+            background-color: #ff4c4c;
+            color: #ffffff;
+        }
+
+        .btn-edit {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+        }
+
+
+        /* Custom Scrollbar */
+        .list-container::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .list-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .list-container::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            border: 3px solid #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Point Category List
+        </div>
+        <div class="button-group">
+            <button class="btn btn-outline-success">Create Point Category</button>
+            <button class="btn btn-outline-success active-button">Point Category List</button>
+        </div>
+        <div class="list-container">
+            <div class="list-header">Point Category List</div>
+            <div class="list-item" onclick="this.classList.toggle('active')">
+                <p><strong>Point Category Name:</strong> Anjal Binth Ali Saleem</p>
+                <span class="arrow">&#x25BC;</span>
+                <div class="details">
+                    <p><strong>Total Number of Point:</strong> 50</p>
+                    <p><strong>Deduction amount per click:</strong> 3.5</p>
+                    <div class="button-group-inline">
+                        <button class="btn btn-delete">Delete</button>
+                        <button class="btn btn-edit">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-item" onclick="this.classList.toggle('active')">
+                <p><strong>Point Category Name:</strong> Anjal Binth Ali Saleem</p>
+                <span class="arrow">&#x25BC;</span>
+            </div>
+            <div class="list-item" onclick="this.classList.toggle('active')">
+                <p><strong>Point Category Name:</strong> Anjal Binth Ali Saleem</p>
+                <span class="arrow">&#x25BC;</span>
+            </div>
+            <div class="list-item" onclick="this.classList.toggle('active')">
+                <p><strong>Point Category Name:</strong> Anjal Binth Ali Saleem</p>
+                <span class="arrow">&#x25BC;</span>
+            </div>
+        </div>
+    </div>
+    @include('includes.footer')
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

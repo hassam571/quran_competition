@@ -1,0 +1,82 @@
+
+    <div class="container">
+        <div class="header">
+            Create Questions
+        </div>
+        <div class="button-group">
+            <button class="btn btn-outline-success active-button">Create Questions</button>
+            <button class="btn btn-outline-success">Question List</button>
+        </div>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+
+                    <select class="form-control" id="competitionName">
+                        <option>Select Competition Name</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="questionName" placeholder="Question Name">
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="ageCategory">
+                        <option>Select Age Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="sideCategory">
+                        <option>Select Side Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="readCategory">
+                        <option>Select Read Category</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="bookNumber">
+                        <option>Select Book Number</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="fromAyatNumber">
+                        <option>Select From Ayat Number</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <select class="form-control" id="toAyatNumber">
+                        <option>Select To Ayat Number</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="hardness" placeholder="Hardness of this Question %">
+                </div>
+                <button type="submit" class="btn btn-save">Save</button>
+            </form>
+        </div>
+        <div class="form-container">
+            <form>
+                <div class="form-group d-flex align-items-center">
+
+                    <input type="file" class="form-control-file" id="bulkUpload">
+                </div>
+                <button type="submit" class="btn btn-save">Submit</button>
+            </form>
+        </div>
+    </div>
+    @include('includes.footer')
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
